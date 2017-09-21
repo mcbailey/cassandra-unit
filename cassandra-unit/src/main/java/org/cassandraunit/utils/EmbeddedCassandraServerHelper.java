@@ -159,6 +159,7 @@ public class EmbeddedCassandraServerHelper {
                 .addContactPoints(EmbeddedCassandraServerHelper.getHost())
                 .withPort(EmbeddedCassandraServerHelper.getNativeTransportPort())
                 .withQueryOptions(queryOptions)
+                .withCredentials("cassandra", "cassandra")
                 .build();
 
             session = cluster.connect();
